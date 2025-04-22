@@ -1,125 +1,186 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ramy Helow | Software Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #1e293b;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    header p {
-      margin: 0.5rem 0;
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    h2 {
-      color: #1e293b;
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-    ul {
-      padding-left: 1rem;
-    }
-    .project a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #1e293b;
-      color: white;
-    }
-    .contact a {
-      color: #60a5fa;
-      text-decoration: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramy W. Helow - Software Engineer Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Use a standard font size for print */
+            font-size: 11pt;
+            /* Basic line height */
+            line-height: 1.4;
+        }
+        /* Reduce link color intensity for print */
+        a {
+            color: #2563eb; /* Slightly darker blue */
+        }
+        /* Ensure sections have consistent bottom margin */
+        section {
+            margin-bottom: 1rem; /* Equivalent to mb-4 */
+        }
+        /* Style headings */
+        h1 {
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700; /* bold */
+            margin-bottom: 0.25rem; /* mb-1 */
+        }
+        h2 {
+             font-size: 1.125rem; /* text-lg */
+             font-weight: 600; /* semibold */
+             border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+             padding-bottom: 0.25rem; /* pb-1 */
+             margin-top: 1rem; /* mt-4 */
+             margin-bottom: 0.75rem; /* mb-3 */
+        }
+         h3 {
+             font-size: 1rem; /* text-base */
+             font-weight: 600; /* semibold */
+             margin-bottom: 0.25rem; /* mb-1 */
+         }
+        /* Style list items for experience/projects */
+        ul {
+            list-style-position: outside;
+            padding-left: 1.25rem; /* pl-5 */
+        }
+        li {
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+        /* Fine-tune spacing for potentially fitting on one page */
+        /* Reduce some margins slightly if needed */
+        /* Example: section { margin-bottom: 0.8rem; } */
+
+        /* Print-specific styles */
+        @media print {
+            body {
+                font-size: 10pt; /* Slightly smaller for print */
+                color: #000; /* Ensure black text */
+            }
+            a {
+                color: #000; /* Black links for print */
+                text-decoration: none; /* No underline */
+            }
+            /* Hide elements not needed for print if any */
+            .no-print {
+                display: none;
+            }
+            /* Try to prevent page breaks within sections */
+            section, div.experience-item, div.project-item {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <h1>Ramy W. Helow</h1>
-    <p>Software Engineer | Seattle, WA</p>
-    <p class="contact">
-      <a href="mailto:dev.ramyhelow@gmail.com">dev.ramyhelow@gmail.com</a> |
-      <a href="tel:+14255722710">+1 425 572 2710</a> |
-      <a href="https://linkedin.com/in/ramyhelow" target="_blank">LinkedIn</a>
-    </p>
-  </header>
-  <main>
-    <section>
-      <h2>Profile</h2>
-      <p>Motivated Software Engineer with over 5 years of experience delivering scalable, secure solutions. Skilled in full-cycle development, testing, and improving user experiences across mobile and web applications.</p>
+<body class="bg-white text-gray-800 max-w-4xl mx-auto p-8">
+
+    <header class="text-center mb-6">
+        <h1>Ramy W. Helow</h1>
+        <p class="text-lg text-gray-600 mb-2">Software Engineer</p>
+        <div class="text-sm text-gray-500 flex justify-center space-x-4 flex-wrap">
+            <span>Seattle, WA</span>
+            <span>|</span>
+            <span>+1 425 572 2710</span>
+            <span>|</span>
+            <a href="mailto:dev.ramyhelow@gmail.com" class="hover:text-blue-700">dev.ramyhelow@gmail.com</a>
+            <span>|</span>
+            <a href="https://linkedin.com/in/ramyhelow" target="_blank" rel="noopener noreferrer" class="hover:text-blue-700">linkedin.com/in/ramyhelow</a>
+        </div>
+    </header>
+
+    <section id="profile">
+        <h2>Profile</h2>
+        <p class="text-gray-700">
+            Highly motivated Software Engineer with over 5 years of comprehensive experience in designing, developing, and deploying high-impact, scalable, and secure software solutions within fast-paced environments. Demonstrated expertise in full-cycle software development, fostering cross-functional collaboration, and optimizing developer workflows to boost performance. Proven ability to create robust testing frameworks, enhance user experiences, and maintain system reliability for mission-critical applications. Seeking to leverage technical skills and leadership capabilities in a challenging software engineering role.
+        </p>
     </section>
 
-    <section>
-      <h2>Skills</h2>
-      <p><strong>Languages:</strong> Java, Python, Kotlin, JavaScript, Dart, NodeJS, PHP</p>
-      <p><strong>Technologies:</strong> Android, Flutter, Flask, Laravel, Django, Spring, Appium, RobotFramework, AWS, SQL, Firebase</p>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-2 text-sm">
+            <div><strong>Programming Languages:</strong> Java, Python, Kotlin, JavaScript, Dart, NodeJS, PHP</div>
+            <div><strong>Technologies & Frameworks:</strong> Android Development, Flutter, Flask (API), Laravel, Django, Spring Framework, RESTful APIs</div>
+            <div><strong>Testing & Automation:</strong> Appium, Robot Framework, API Mocking, Unit Testing, Integration Testing</div>
+            <div><strong>Cloud & DevOps:</strong> AWS (Lambda, S3, API Gateway, RDS, CloudWatch), CI/CD Pipelines</div>
+            <div><strong>Databases:</strong> SQL, Firebase</div>
+            <div><strong>Version Control:</strong> Git, GitHub/GitLab/Bitbucket</div>
+            <div><strong>Methodologies:</strong> Agile/Scrum, Full-Cycle Software Development, Cross-Functional Collaboration</div>
+            <div><strong>Other:</strong> Problem Solving, System Design, Debugging, Performance Optimization</div>
+        </div>
     </section>
 
-    <section>
-      <h2>Experience</h2>
-      <h3>First Orion | Software Engineer (Jul 2020 – Nov 2024)</h3>
-      <ul>
-        <li>Improved features for T-Mobile’s ScamShield app, enhancing UX and security.</li>
-        <li>Built testing frameworks with API mocking, increasing reliability and coverage.</li>
-        <li>Owned key system components, handled incidents, and ensured uptime.</li>
-      </ul>
-      <h3>Sofy.AI | Software Engineer Intern (Feb 2020 – Jul 2020)</h3>
-      <ul>
-        <li>Integrated bandwidth control to improve testing efficiency.</li>
-        <li>Created E2E test strategies, reducing integration issues and improving stability.</li>
-      </ul>
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        <div class="experience-item mb-4">
+            <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-semibold">First Orion</h3>
+                <span class="text-sm text-gray-500">Bellevue, WA</span>
+            </div>
+            <div class="flex justify-between items-baseline mb-2">
+                <p class="italic">Software Engineer</p>
+                <span class="text-sm text-gray-500">July 2020 – November 2024</span>
+            </div>
+            <ul class="list-disc text-gray-700">
+                <li>Enhanced Mobile Application Features: Collaborated effectively with product managers, designers, and backend engineers to develop and refine key features for T-Mobile's ScamShield app, resulting in significantly improved user experience and enhanced app security, positively impacting user engagement and trust.</li>
+                <li>Developed Comprehensive Testing Solutions: Designed and implemented robust testing frameworks, including API mocking, to streamline the testing of complex account states. This initiative significantly increased test coverage and reliability, leading to improved system stability and higher customer satisfaction.</li>
+                <li>Owned Critical System Components: Served as the Designated Responsible Individual (DRI) for high-priority system components, proactively monitoring service availability and rapidly addressing incidents to ensure minimal downtime. Responsibilities included root cause analysis, implementation of corrective actions, and clear communication of resolutions to stakeholders.</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-semibold">Sofy.AI</h3>
+                <span class="text-sm text-gray-500">Bellevue, WA</span>
+            </div>
+            <div class="flex justify-between items-baseline mb-2">
+                <p class="italic">Software Engineer Intern</p>
+                <span class="text-sm text-gray-500">February 2020 – July 2020</span>
+            </div>
+            <ul class="list-disc text-gray-700">
+                <li>Implemented Advanced Bandwidth Control: Integrated innovative bandwidth control techniques to optimize platform performance and ensure efficient resource utilization, significantly reducing testing device downtime and enhancing the software validation process.</li>
+                <li>Designed & Executed Test Strategies: Developed and executed comprehensive end-to-end test strategies to facilitate seamless software integration, minimizing errors, improving edge case detection, and enhancing overall product stability and user experience.</li>
+            </ul>
+        </div>
     </section>
 
-    <section>
-      <h2>Projects</h2>
-      <div class="project">
-        <p><strong>AIML University Chatbot</strong> — <a href="https://youtu.be/4A7Rv0RXTQA" target="_blank">Watch demo</a></p>
-        <ul>
-          <li>Built chatbot for Android/web to answer university-related queries.</li>
-          <li>Used NLP and local caching to reduce feedback time by 40%.</li>
+    <section id="education">
+        <h2>Education</h2>
+        <div class="flex justify-between items-baseline">
+            <h3 class="font-semibold">University of Gaza</h3>
+            <span class="text-sm text-gray-500">September 2015 – November 2019</span>
+        </div>
+        <p class="italic">Bachelor of Science in Computer Science</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-item">
+             <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-semibold">AIML University Chatbot</h3>
+                 <span class="text-sm text-gray-500">2018 – 2019</span>
+            </div>
+            <ul class="list-disc text-gray-700">
+                <li>Developed a university student chatbot system using AIML for Android and web platforms, providing real-time responses to inquiries.</li>
+                <li>Reduced feedback processing time by 40% through local device caching implementation.</li>
+                <li>Integrated Natural Language Processing (NLP) techniques for enhanced conversational query handling and user engagement.</li>
+                </ul>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+         <h3 class="font-semibold">Android Developer Nanodegree</h3>
+         <p class="italic text-gray-600 mb-1">Udacity (in partnership with Google)</p>
+        <ul class="list-disc text-gray-700">
+            <li>Completed an intensive program covering fundamental to advanced Android application development practices.</li>
+            <li>Built a portfolio of real-world projects, gaining recognized credentials as a proficient Android developer.</li>
         </ul>
-      </div>
     </section>
 
-    <section>
-      <h2>Education</h2>
-      <p><strong>University of Gaza</strong> — BSc in Computer Science (2015 – 2019)</p>
-    </section>
-
-    <section>
-      <h2>Certificates</h2>
-      <p><strong>Android Developer Nanodegree</strong> — Udacity & Google</p>
-      <p>Comprehensive course covering core to advanced Android development skills.</p>
-    </section>
-  </main>
-  <footer>
-    <p>© 2025 Ramy W. Helow</p>
-  </footer>
 </body>
 </html>
+
