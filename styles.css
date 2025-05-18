@@ -58,4 +58,10 @@ body {
     .no-print {
         display: none;
     }
+}
+
+/* Experience Section Styles */
+.experience-subheader {
+    font-weight: bold;
+    display: inline;
 } 
